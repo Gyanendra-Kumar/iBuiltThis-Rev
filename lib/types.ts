@@ -21,3 +21,9 @@ export interface StatsProps {
   label: string;
   hasBorder?: boolean;
 }
+
+export interface SectionHeaderProps {
+  title: string;
+  icon: LucideIcon;
+  description?: string;
+}

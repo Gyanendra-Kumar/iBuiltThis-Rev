@@ -1,8 +1,8 @@
 import Link from "next/link";
 import { hero, heroButton, statsData } from "../../lib/constants";
+import StatsCard from "../packages/stats.card";
 import { Badge } from "../ui/badge";
 import { Button } from "../ui/button";
-import StatsCard from "./stats.card";
 
 const LiveBadge = () => {
   return (

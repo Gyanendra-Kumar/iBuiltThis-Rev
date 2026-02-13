@@ -1,13 +1,16 @@
 import {
   ArrowRightIcon,
+  ArrowUpRightIcon,
   EyeIcon,
   RocketIcon,
   SparkleIcon,
+  StarIcon,
   UsersIcon,
 } from "lucide-react";
 import { HomeButtonProps, StatsProps } from "./types";
 
-export const hero = {
+// HERO SECTION
+export const hero: Record<string, string> = {
   badge: "Join thousands of creators sharing their work",
   heading: "Share what you&apos;ve Built, Discovered what&apos;s Launching",
   description:
@@ -50,5 +53,55 @@ export const statsData: StatsProps[] = [
     icon: EyeIcon,
     value: "50K+",
     label: "monthly visitors",
+  },
+];
+
+// FEATURED SECTION
+export const featuredDetails = {
+  title: "Featured Today",
+  icon: StarIcon,
+  description: "Top picks from our community this week.",
+  buttonLabel: [
+    {
+      id: 1,
+      label: "View All",
+      href: "/explore",
+      icon: ArrowUpRightIcon,
+    },
+  ],
+};
+
+export const featuredProducts = [
+  {
+    id: 1,
+    name: "ParityKit",
+    description: "A tool for creating parity products.",
+    tags: ["SAAS", "Pricing", "Global"],
+    votes: 615,
+    isFeatured: true,
+  },
+  {
+    id: 2,
+    name: "Developer to Leaders",
+    description: "A tool for creating parity products.",
+    tags: ["Pricing", "Global"],
+    votes: 615,
+    isFeatured: false,
+  },
+  {
+    id: 3,
+    name: "ParityKit 2",
+    description: "A tool for creating parity products.",
+    tags: ["SAAS", "Pricing"],
+    votes: 615,
+    isFeatured: false,
+  },
+  {
+    id: 4,
+    name: "ParityKit 3",
+    description: "A tool for creating parity products.",
+    tags: ["SAAS", "Global"],
+    votes: 615,
+    isFeatured: true,
   },
 ];

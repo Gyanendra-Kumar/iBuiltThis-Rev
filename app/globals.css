@@ -223,4 +223,12 @@
   .card-hover {
     @apply hover:shadow-md hover:scale-105 transition-all duration-300 ease-in-out;
   }
+
+  .empty-state {
+    @apply border rounded-lg p-12 text-center;
+  }
+
+  .status-badge-card {
+    @apply border rounded-lg p-6 transition-all hover:shadow-md;
+  }
 }
