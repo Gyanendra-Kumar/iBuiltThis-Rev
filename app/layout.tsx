@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-});
+import { outfit } from "./fonts";
 
 export const metadata: Metadata = {
   title: "iBuiltThis - Share Your Creations, Discover New Launches",

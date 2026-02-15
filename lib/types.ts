@@ -21,3 +21,18 @@ export interface StatsProps {
   label: string;
   hasBorder?: boolean;
 }
+
+export interface SectionHeaderProps {
+  title: string;
+  icon: LucideIcon;
+  description?: string;
+}
+
+export interface featuredProductsProps {
+  id: number;
+  name: string;
+  description: string;
+  tags: string[];
+  votes: number;
+  isFeatured: boolean;
+}
