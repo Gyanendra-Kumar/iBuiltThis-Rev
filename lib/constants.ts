@@ -7,7 +7,7 @@ import {
   StarIcon,
   UsersIcon,
 } from "lucide-react";
-import { HomeButtonProps, StatsProps } from "./types";
+import { featuredProductsProps, HomeButtonProps, StatsProps } from "./types";
 
 // HERO SECTION
 export const hero: Record<string, string> = {
@@ -71,7 +71,7 @@ export const featuredDetails = {
   ],
 };
 
-export const featuredProducts = [
+export const featuredProducts: featuredProductsProps[] = [
   {
     id: 1,
     name: "ParityKit",

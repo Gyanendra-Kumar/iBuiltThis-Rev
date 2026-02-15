@@ -27,3 +27,12 @@ export interface SectionHeaderProps {
   icon: LucideIcon;
   description?: string;
 }
+
+export interface featuredProductsProps {
+  id: number;
+  name: string;
+  description: string;
+  tags: string[];
+  votes: number;
+  isFeatured: boolean;
+}
