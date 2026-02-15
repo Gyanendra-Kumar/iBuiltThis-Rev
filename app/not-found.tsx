@@ -36,8 +36,7 @@ const NotFound = () => {
           <video
             ref={videoRef}
             src="/video/sorry.mp4"
-            preload="none"
-            autoPlay
+            preload="auto"
             muted
             loop
             playsInline
@@ -52,7 +51,7 @@ const NotFound = () => {
             >
               <Link
                 href="/"
-                className={`animate-pulse hover:animate-none font-semibold text-xl ${eduNswActCursive.className} font-sans`}
+                className={`animate-pulse hover:animate-none font-semibold text-xl ${eduNswActCursive.className}`}
               >
                 Please Go Home
               </Link>

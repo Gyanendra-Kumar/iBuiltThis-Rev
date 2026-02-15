@@ -8,7 +8,7 @@ export const FeaturedProducts = () => {
   return (
     <section className="py-20 bg-muted/20">
       <div className="wrapper">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between">
           <SectionHeader
             title={featuredDetails.title}
             icon={featuredDetails.icon}
