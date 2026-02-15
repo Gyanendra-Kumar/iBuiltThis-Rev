@@ -42,6 +42,7 @@ const NotFound = () => {
             loop
             playsInline
             poster="/not-found.png"
+            className="w-full h-screen object-cover"
           />
           {showButton && (
             <Button
