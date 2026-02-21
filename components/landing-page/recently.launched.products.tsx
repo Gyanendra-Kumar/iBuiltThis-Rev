@@ -13,7 +13,7 @@ export const RecentlyLaunchedProducts = () => {
           icon={RocketIcon}
           description="The most recently launched products on the platform."
         />
-        {featuredProducts.length < 0 ? (
+        {featuredProducts.length > 0 ? (
           <div className="grid-wrapper">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />

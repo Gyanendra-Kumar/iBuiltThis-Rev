@@ -1,7 +1,9 @@
 import {
   ArrowRightIcon,
   ArrowUpRightIcon,
+  CompassIcon,
   EyeIcon,
+  HomeIcon,
   RocketIcon,
   SparkleIcon,
   StarIcon,
@@ -105,3 +107,18 @@ export const featuredProducts: featuredProductsProps[] = [
     isFeatured: true,
   },
 ];
+
+export const navItems = [
+  {
+    id: 1,
+    icon: HomeIcon,
+    label: "Home",
+    href: "/",
+  },
+  {
+    id: 2,
+    icon: CompassIcon,
+    label: "Explore",
+    href: "/explore",
+  }
+]
