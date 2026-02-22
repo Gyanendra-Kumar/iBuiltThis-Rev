@@ -1,13 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { Button } from "../components/ui/button";
-import { eduNswActCursive } from "./fonts";
+import { useEffect, useRef } from "react";
 
 const NotFound = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showButton, setShowButton] = useState(false);
+  // const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,14 +21,14 @@ const NotFound = () => {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowButton(true), 4000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setShowButton(true), 4000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <section className="bg-white">
-      <div className="flex justify-center items-center h-screen w-full">
+      <div className="flex justify-center items-center h-[calc(100vh-4rem)] w-full">
         <div className="relative">
           <video
             ref={videoRef}
@@ -41,9 +38,9 @@ const NotFound = () => {
             loop
             playsInline
             poster="/not-found.png"
-            className="w-full h-screen object-cover"
+            className="lg:w-full lg:h-[calc(100vh-4rem)] object-cover"
           />
-          {showButton && (
+          {/* {showButton && (
             <Button
               variant="ghost"
               asChild
@@ -56,7 +53,7 @@ const NotFound = () => {
                 Please Go Home
               </Link>
             </Button>
-          )}
+          )} */}
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Footer from "../components/landing-page/footer";
+import Header from "../components/landing-page/header";
+import { outfit } from "../lib/fonts";
 import "./globals.css";
-import { outfit } from "./fonts";
 
 export const metadata: Metadata = {
   title: "iBuiltThis - Share Your Creations, Discover New Launches",
@@ -15,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.className}  antialiased`}>{children}</body>
+      <body className={`${outfit.className}`}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
