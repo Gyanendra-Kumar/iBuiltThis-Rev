@@ -1,4 +1,5 @@
-import { SparkleIcon, UserIcon } from "lucide-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SparkleIcon } from "lucide-react";
 import Link from "next/link";
 import { navItems } from "../../lib/constants";
 import { Button } from "../ui/button";
@@ -17,7 +18,7 @@ const Logo = () => {
 };
 
 const Header = () => {
-  const isSignedIn = true;
+  const isSignedIn = false;
   return (
     <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-backdrop-filter:bg-background/60">
       <div className="wrapper px-6 sm:px-12">
@@ -39,28 +40,28 @@ const Header = () => {
             })}
           </nav>
           <div className="flex items-center gap-3">
-            {isSignedIn ? (
-              <>
-                <Button asChild>
-                  <Link href="/submit">
-                    <SparkleIcon className="size-4" /> Submit Project
-                  </Link>
-                </Button>
-                <Button variant="ghost">
-                  <UserIcon className="size-4" />
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button
-                  variant="outline"
-                  className="hover:bg-primary/10 hover:text-primary hover:border-primary"
-                >
-                  Sign In
-                </Button>
-                <Button>Sign Up</Button>
-              </>
-            )}
+            <SignedOut>
+              <Button
+                asChild
+                variant="outline"
+                className="hover:border-primary hover:bg-primary/10 hover:text-primary"
+              >
+                <Link href="/sign-in">Sign In</Link>
+              </Button>
+              <Button asChild>
+                <Link href="/sign-up">Sign Up</Link>
+              </Button>
+            </SignedOut>
+            <SignedIn>
+              <Button asChild>
+                <Link href="/submit">
+                  <SparkleIcon className="size-4" /> Submit Project
+                </Link>
+              </Button>
+              <div className="clerk-user-button">
+                <UserButton />
+              </div>
+            </SignedIn>
           </div>
         </div>
       </div>
