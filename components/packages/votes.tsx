@@ -25,9 +25,12 @@ const Votes = () => {
       <Button
         variant="ghost"
         size="icon-sm"
+        disabled={!hasVoted}
         className={cn(
-          "h-8 w-8 text-primary hover:bg-primary/20",
-          hasVoted ? "hover:text-destructive" : "opacity-50 cursor-not-allowed",
+          "h-8 w-8 text-primary",
+          hasVoted
+            ? "hover:bg-primary/20 hover:text-destructive"
+            : "opacity-50 cursor-not-allowed",
         )}
       >
         <ChevronDown className="size-5" />
